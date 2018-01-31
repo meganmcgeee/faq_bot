@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" media="all" href="./components/style/window.css">
+	<link rel="stylesheet" media="all" href="./components/style/user_says.css">
+	<link rel="stylesheet" media="all" href="./components/style/bot_says.css">
+	<link rel="stylesheet" media="all" href="./components/style/typing.css">
+	<link rel="stylesheet" media="all" href="./components/style/input.css">
+  <title>FAQ Bot</title>
+</head>
+<body>
+  <div id="chat">
+   <div class="bot-hide"> 
+    <p>To display a bot window click
+      <a href="javascript:void(0)" 
+        onclick="document.getElementById('bot').style.display='block';
+                 document.getElementById('fade').style.display='block'">Open</a>
+    </p>
+  </div>
+    <div id="bot" class="bot-window">
+      <div id="header" class="bot-header">
+        <a href="javascript:void(1)" onclick="document.getElementById('bot').style.display='none';
+          document.getElementById('fade').style.display='none'">X</a>
+      </div>
+      <div id="dialog-frame">
+        <div id="bot says">
+          <p>{{Oh Hi Tommie</p>
+        </div>
+        <div id="user says">
+          <p>{{How much are ay dozen red roses}}</p>
+        </div>
+        <div id="input">
+          <div id="typing"></div>
+        </div>
+      </div> 
+        <input type="text">
+    </div>
+    <div id="fade" class="black_overlay"></div>
+  </div>
+  <script src="./js/draggable.js"></script>
+</body>
+</html>
+
+
+<html>
