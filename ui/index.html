@@ -12,31 +12,42 @@
   <title>FAQ Bot</title>
 </head>
 <body>
+  <!-- Hide  -->
   <div id="chat">
-   <div class="bot-hide"> 
-    <p>To display a bot window click
+   <div id="bot-hide"> 
+    <p>
       <a href="javascript:void(0)" 
         onclick="document.getElementById('bot').style.display='block';
-                 document.getElementById('fade').style.display='block'">Open</a>
+                 document.getElementById('fade').style.display='block'">TALK TO OUR BOT</a>
     </p>
   </div>
+
+  <!-- Bot Window -->
     <div id="bot" class="bot-window">
       <div id="header" class="bot-header">
         <a href="javascript:void(1)" onclick="document.getElementById('bot').style.display='none';
           document.getElementById('fade').style.display='none'">X</a>
       </div>
       <div id="dialog-frame">
-        <div id="bot says">
-          <p>{{Oh Hi Tommie</p>
+        <div id="bot-says">
+          <p>Bot:</p>
+          <p>Hi Human</p>
         </div>
-        <div id="user says">
-          <p>{{How much are ay dozen red roses}}</p>
+        <div id="user-says">
+          <p>User:</p>
+          <p>Oh, cool. You're a bot!</p>
         </div>
         <div id="input">
           <div id="typing"></div>
         </div>
       </div> 
-        <input type="text">
+      <div id="user-input">
+        <form action="">
+          <input type="text">
+          <button>Send</button>
+        </form>
+        
+      </div>
     </div>
     <div id="fade" class="black_overlay"></div>
   </div>

@@ -1,4 +1,4 @@
-//Make the DIV element draggagle:
+//Make the bot window element draggagle:
 dragElement(document.getElementById(("bot")));
 
 function dragElement(elmnt) {

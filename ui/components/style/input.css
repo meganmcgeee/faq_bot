@@ -1,0 +1,40 @@
+/* User input */
+
+button, input {
+  position: relative;
+  /* left: 440px;
+  top: 360px;
+  padding: 5px; */
+  font: bold 1em sans-serif;
+  margin-top: 15em;
+  border: .5px solid #333;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+}
+
+input{
+  width: 70%;
+  height: 30px;
+}
+
+button{
+  width: 20%;
+  height: 30px;
+  text-align: center;
+}
+
+/* button:after {
+  content: " >>>";
+} */
+
+button:hover,
+button:focus {
+  outline: none;
+  background: #000;
+  color: #FFF;
+}
+
+.user-input{
+  margin-top: 3em;
+}
