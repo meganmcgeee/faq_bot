@@ -1,4 +1,4 @@
-const projectId = 'ENTER_PROJECT_ID_HERE'; //https://dialogflow.com/docs/agents#settings
+const faqBotId = 'ENTER_PROJECT_ID_HERE'; //https://dialogflow.com/docs/agents#settings
 const sessionId = 'quickstart-session-id';
 const query = 'hello';
 const languageCode = 'en-US';
@@ -8,7 +8,7 @@ const dialogflow = require('dialogflow');
 const sessionClient = new dialogflow.SessionsClient();
 
 // Define session path
-const sessionPath = sessionClient.sessionPath(projectId, sessionId);
+const sessionPath = sessionClient.sessionPath(faqBotId, sessionId);
 
 // The text query request.
 const request = {
