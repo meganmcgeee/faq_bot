@@ -1,12 +1,11 @@
 ## Start development server & build
 
-Open your cloned folder. Then, using your favorite package manager run `dev` command.
 
-Example using npm
+To run locally using npm
 
 `npm run dev`
 
-Example using yarn
+To run locally using yarn
 
 `yarn dev`
 

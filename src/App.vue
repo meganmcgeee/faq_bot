@@ -1,12 +1,6 @@
 <template>
   <section id="app">
     <!-- Bot Window -->
-        <div id="header" class="bot-header">
-          <!-- Handles bot hiding  -->
-          <a href="javascript:void(1)" onclick="document.getElementById('bot').style.display='none';
-            document.getElementById('fade').style.display='none'">x</a>
-        </div>
-
         <div id="dialog-frame">
          <!-- Chat window -->
           <table v-for="a in answers">
@@ -66,6 +60,16 @@
       <!-- <div id="fade" class="black_overlay"></div> -->
   </section>
 </template>
+
+// Style Imports
+<style lang="sass" scoped>
+  @import './components/style/bot_says.sass'
+  @import './components/style/input.sass'
+  @import './components/style/window.sass'
+
+</style>
+
+// Bot Logic
 <script>
   import { ApiAiClient } from 'api-ai-javascript'
   const client = new ApiAiClient({accessToken: 'dd67cd4830ff41999f703e816ef02b04'}) // <- replace it with yours
@@ -83,7 +87,7 @@
     watch: {
       answers: function(val){
         setTimeout(() => {
-          document.querySelector('.copyright').scrollIntoView({
+          document.querySelector('#query').scrollIntoView({
             behavior: 'smooth'
           })
         }, 2)
