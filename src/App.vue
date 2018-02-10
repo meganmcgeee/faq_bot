@@ -66,4 +66,43 @@
       <!-- <div id="fade" class="black_overlay"></div> -->
   </section>
 </template>
+<script>
+  import { ApiAiClient } from 'api-ai-javascript'
+  const client = new ApiAiClient({accessToken: 'dd67cd4830ff41999f703e816ef02b04'}) // <- replace it with yours
+
+
+  export default {
+    name: 'app',
+    data: function(){
+      return{
+        answers: [],
+        query: '',
+        speech: 'Go ahead, I am listening',
+      }
+    },
+    watch: {
+      answers: function(val){
+        setTimeout(() => {
+          document.querySelector('.copyright').scrollIntoView({
+            behavior: 'smooth'
+          })
+        }, 2)
+      }
+    },
+    methods: {
+      submit(){
+        client.textRequest(this.query).then((response) =>{
+          this.answers.push(response)
+          this.handle(response)
+
+          this.query = '',
+          this.speech = 'Go ahead, I am listening'
+        })
+      }
+    }
+
+  }
+
+</script>
+
 
