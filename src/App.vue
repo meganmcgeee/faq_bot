@@ -3,7 +3,7 @@
     <!-- Bot Window -->
         <div id="dialog-frame">
          <!-- Chat window -->
-          <table v-for="a in answers">
+          <table v-for="a in answers" id="bot-says">
           <!-- User messages -->
             <tr>
               <td>{{a.result.resolvedQuery}}</td>
@@ -63,10 +63,9 @@
 
 // Style Imports
 <style lang="sass" scoped>
-  @import './components/style/bot_says.sass'
-  @import './components/style/input.sass'
-  @import './components/style/window.sass'
-
+  #app
+    max-width: 300px
+    font: 1em sans-serif
 </style>
 
 // Bot Logic
@@ -87,7 +86,7 @@
     watch: {
       answers: function(val){
         setTimeout(() => {
-          document.querySelector('#query').scrollIntoView({
+          document.querySelector('.query').scrollIntoView({
             behavior: 'smooth'
           })
         }, 2)
