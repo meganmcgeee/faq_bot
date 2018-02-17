@@ -1,37 +1,36 @@
 <template>
   <section id="app">
-      <!-- Bot Window -->
-        <div id="dialog-frame">
-          <!-- Chat window -->
-          <table v-for="a in answers">
-          <!-- User messages -->
+    <!-- Bot Window -->
+      <div id="dialog-frame">
+        <!-- Chat window -->
+        <table v-for="a in answers">
+        <!-- User messages -->
+          <tr>
+            <td id="user-says">{{a.result.resolvedQuery}}</td>
+          </tr>
+        <!-- Bot messages -->
             <tr>
-              <td id="user-says">{{a.result.resolvedQuery}}</td>
-            </tr>
-          <!-- Bot messages -->
-              <tr>
-              <td id="bot-says">
-          <!-- Bot message types / Speech -->
-                <div v-if="a.result.fulfillment.speech">
-                  {{a.result.fulfillment.speech}}
-                </div>
-              </td>
-            </tr>
-          </table>
-        <!-- User Input Box and Send Button -->
-        <div class="query" id="user-input">
-          <input aria-label="Ask me something" 
-            autocomplete="off" 
-            v-model="query" 
-            class="queryform" 
-            @keyup.enter="submit()" 
-            placeholder="Ask me something..." 
-            autofocus type="text">
-          <button>Send</button>
-        </div>
+            <td id="bot-says">
+        <!-- Bot message types / Speech -->
+              <div v-if="a.result.fulfillment.speech">
+                {{a.result.fulfillment.speech}}
+              </div>
+            </td>
+          </tr>
+        </table>
+      <!-- User Input Box and Send Button -->
+      <div class="query" id="user-input">
+        <input aria-label="Ask me something" 
+          autocomplete="off" 
+          v-model="query" 
+          class="queryform" 
+          @keyup.enter="submit()" 
+          placeholder="Ask me something..." 
+          autofocus type="text">
+        <button>Send</button>
       </div>
     </div>
-    <!-- <div id="fade" class="black_overlay"></div> -->
+  </div>
   </section>
 </template>
 

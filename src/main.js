@@ -1,25 +1,16 @@
 import App from './App.vue'
 import Vue from 'vue'
+import VueFrame from 'vue-frame'
 
 new Vue({
   el: '#app',
   render: h => h(App)
 }).$mount('#app')
 
-// Vue.component('modal', {
-//   template: '#modal-template',
-//   props: {
-//     show: {
-//       type: Boolean,
-//       required: true,
-//       twoWay: true
-//     }
-//   }
-// });
-
-// new Vue({
-//   el: '#modal-app',
-//   data: {
-//     showModal: false
-//   }
-// });
+// export default {
+//   components: { VueFrame },
+//   data() {
+//     return { /*...*/ }
+//   },
+//   methods: { /*...*/ }
+// }
