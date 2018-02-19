@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <!-- <div id="fade" class="black_overlay"></div> -->
+    <chrome-picker v-model="colors" />
   </section>
 </template>
 
@@ -42,6 +42,7 @@
 // Bot Logic
 <script>
   import { ApiAiClient } from 'api-ai-javascript'
+  
   const client = new ApiAiClient({accessToken: 'dd67cd4830ff41999f703e816ef02b04'}) // <- replace it with yours
 
 
@@ -65,7 +66,6 @@
         })
       }
     }
-
   }
 </script>
 
