@@ -1,0 +1,29 @@
+{
+  "id": "3a3d4327-1943-45ee-8d18-09e81d5d9c8a",
+  "name": "jobApplication",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "jobApplication",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I can\u0027t access this service at the moment. If you\u0027re not feeling safe please call 9-1-1."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518662522,
+  "fallbackIntent": false,
+  "events": []
+}

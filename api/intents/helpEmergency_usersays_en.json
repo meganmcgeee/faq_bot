@@ -1,0 +1,92 @@
+[
+  {
+    "id": "8223a6dc-b5e1-488c-8abf-c836a6c897ad",
+    "data": [
+      {
+        "text": "emergenecy",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518218593
+  },
+  {
+    "id": "3571f774-2a2f-444b-a9bf-a66cd229ffcb",
+    "data": [
+      {
+        "text": "EmergencyIndicators",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1518217757
+  },
+  {
+    "id": "063cb357-037e-40ef-84ea-a967ee05045a",
+    "data": [
+      {
+        "text": "send help ASAP",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518217757
+  },
+  {
+    "id": "2d17fcd2-5f9d-4990-af37-610137272783",
+    "data": [
+      {
+        "text": "this is an ",
+        "userDefined": false
+      },
+      {
+        "text": "emergency",
+        "alias": "EmergencyIndicators",
+        "meta": "@EmergencyIndicators",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518218593
+  },
+  {
+    "id": "adfc809a-ffaa-49d9-8a2a-3583f9ab88c6",
+    "data": [
+      {
+        "text": "i\u0027ve been the victim of a crime",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518217757
+  },
+  {
+    "id": "891df257-f5b7-4108-aa36-768bb326b469",
+    "data": [
+      {
+        "text": "sos",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518217757
+  },
+  {
+    "id": "4ad2569c-23fc-4335-939c-ec6fbbe553f7",
+    "data": [
+      {
+        "text": "9-1-1",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518217757
+  }
+]

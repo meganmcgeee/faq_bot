@@ -1,0 +1,98 @@
+[
+  {
+    "id": "e9635ced-132f-4f0a-945f-ebe1c42e3472",
+    "data": [
+      {
+        "text": "car fine",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227779
+  },
+  {
+    "id": "75771678-08e9-42fb-ac35-c635b815a588",
+    "data": [
+      {
+        "text": "parking meter",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227779
+  },
+  {
+    "id": "96b75513-c26d-482d-8048-847cdf2ac31b",
+    "data": [
+      {
+        "text": "paring citation",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227779
+  },
+  {
+    "id": "f921b5c1-11f8-4596-8ed0-47a451deab71",
+    "data": [
+      {
+        "text": "car ticket",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227779
+  },
+  {
+    "id": "813160ec-c78c-4511-a1d3-3dddd8533aa8",
+    "data": [
+      {
+        "text": "parking ticket",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227779
+  },
+  {
+    "id": "e84a8451-ab83-44a6-8e59-4fe0b70a268c",
+    "data": [
+      {
+        "text": "i got a ticket",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1518227779
+  },
+  {
+    "id": "09ebdf0f-350b-473b-aa8d-4c0934355f67",
+    "data": [
+      {
+        "text": "illegally parked",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227779
+  },
+  {
+    "id": "109ce7d6-9b5c-4607-9fb4-182039470c5c",
+    "data": [
+      {
+        "text": "i have a summons for parking",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227779
+  }
+]

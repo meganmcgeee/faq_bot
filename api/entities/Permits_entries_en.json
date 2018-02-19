@@ -1,0 +1,18 @@
+[
+  {
+    "value": "Gun",
+    "synonyms": [
+      "Gun",
+      "weapon",
+      "concealed carry",
+      "gun permit"
+    ]
+  },
+  {
+    "value": "Bike",
+    "synonyms": [
+      "Bike",
+      "bicycle"
+    ]
+  }
+]

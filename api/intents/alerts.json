@@ -1,0 +1,58 @@
+{
+  "id": "630a90cd-f66a-4a0d-9867-0c6fb43976f2",
+  "name": "alerts",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "alerts",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "2bfd15de-ee98-4aa3-95c7-ad087b4195a1",
+          "required": true,
+          "dataType": "@Alerts",
+          "name": "Alerts",
+          "value": "$Alerts",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "I can help you with Emergency SMS or Missing Persons Alerts. Which type of alert would you like help with?"
+            }
+          ],
+          "isList": false
+        },
+        {
+          "id": "b283df36-0415-4119-83ec-e3ddb40949b7",
+          "required": true,
+          "dataType": "@sys.phone-number",
+          "name": "phone-number",
+          "value": "$phone-number",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "To which phone number should I send the alert?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I can\u0027t access this service at the moment. If you\u0027re not feeling safe please call 9-1-1."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "lastUpdate": 1518654455,
+  "fallbackIntent": false,
+  "events": []
+}

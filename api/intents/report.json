@@ -1,0 +1,72 @@
+{
+  "id": "1f25f381-316e-4057-b89d-ba3f41366af8",
+  "name": "report",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "report",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "9ee473bb-e44f-4344-92de-9a755bf91fd7",
+          "required": false,
+          "dataType": "@ReportTypes",
+          "name": "ReportTypes",
+          "value": "$ReportTypes",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "What type of report would you like to file? (Crime Report, Missing Person Report Vehicle Accident or Nuisance?)"
+            }
+          ],
+          "isList": false
+        },
+        {
+          "id": "a7790436-3fc1-4e3a-9563-3ccf1758d7c6",
+          "dataType": "@ReportTypes",
+          "name": "ReportTypes1",
+          "value": "$ReportTypes1",
+          "isList": false
+        },
+        {
+          "id": "3eb07c18-5129-430c-a18e-ab53e11d2772",
+          "dataType": "@ReportTypes",
+          "name": "ReportTypes2",
+          "value": "$ReportTypes2",
+          "isList": false
+        },
+        {
+          "id": "ae8a0c9c-ed54-4043-931c-75cadc19096c",
+          "dataType": "@sys.unit-currency",
+          "name": "unit-currency",
+          "value": "$unit-currency",
+          "isList": false
+        },
+        {
+          "id": "3bcdafe3-3931-475f-a1e9-2491aa0e9319",
+          "dataType": "@sys.duration",
+          "name": "duration",
+          "value": "$duration",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I can\u0027t access this service at the moment. If you\u0027re not feeling safe please call 9-1-1."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "lastUpdate": 1518727758,
+  "fallbackIntent": false,
+  "events": []
+}

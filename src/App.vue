@@ -42,9 +42,7 @@
 <script>
   import { ApiAiClient } from 'api-ai-javascript'
   const client = new ApiAiClient({accessToken: 'dd67cd4830ff41999f703e816ef02b04'}) // <- replace it with yours
-
-
-  export default {
+export default {
     name: 'app',
     data: function(){
       return{

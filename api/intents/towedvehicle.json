@@ -1,0 +1,44 @@
+{
+  "id": "4970597e-9bc4-425f-beed-abe61b2ecaf4",
+  "name": "towedvehicle",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "towedVehicle",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "3ffc21d6-a9d4-4c30-ade3-a08b57bd7b47",
+          "required": true,
+          "dataType": "@sys.street-address",
+          "name": "street-address",
+          "value": "$street-address",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Please provide the address where your car was last located."
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I can\u0027t access this service at the moment. If you\u0027re not feeling safe please call 9-1-1."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518663194,
+  "fallbackIntent": false,
+  "events": []
+}

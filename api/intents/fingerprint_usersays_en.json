@@ -1,0 +1,38 @@
+[
+  {
+    "id": "eda98bde-1f0a-4e42-bd31-13fc29b7016b",
+    "data": [
+      {
+        "text": "my prints",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518316271
+  },
+  {
+    "id": "96f8a634-dc51-498f-aa2f-3ce1579821c1",
+    "data": [
+      {
+        "text": "fingerprint",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518316271
+  },
+  {
+    "id": "b4f1f654-7e9f-4b92-918e-fda8b448150b",
+    "data": [
+      {
+        "text": "finger prints",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518316271
+  }
+]
