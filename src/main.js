@@ -15,12 +15,3 @@ new Vue({
 }).$mount('#app')
 
 // Firebase/ Vuefire App Setup
-
-// new Vue({
-//   el: '#user-data',
-//   firebase: function () {
-//     return {
-//       anArray: db.ref('users')
-//     }
-//   }
-// })

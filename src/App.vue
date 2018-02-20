@@ -31,7 +31,6 @@
         <button>Send</button>
       </div>
     </div>
-
   </section>
 </template>
 
