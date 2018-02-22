@@ -5,14 +5,21 @@
         <table v-for="a in answers">
         <!-- User messages -->
           <tr>
-            <td id="user-says" class="to message">{{a.result.resolvedQuery}}</td>
+            <td id="user-says" class="to message">
+              <vue-markdown>
+                {{a.result.resolvedQuery}}
+              </vue-markdown>  
+            </td>
           </tr>
         <!-- Bot messages -->
           <tr>
             <td id="bot-says" class="to from">
         <!-- Bot message types / Speech -->
               <div v-if="a.result.fulfillment.speech">
-                {{a.result.fulfillment.speech}}
+                <vue-markdown>
+                  {{a.result.fulfillment.speech}}
+                </vue-markdown>
+
               </div>
             </td>
           </tr>
@@ -72,8 +79,9 @@
 <script>
 // DialogFlow Tokens
   import { ApiAiClient } from 'api-ai-javascript'
+  import VueMarkdown from 'vue-markdown'
 
-  const client = new ApiAiClient({accessToken: 'dd67cd4830ff41999f703e816ef02b04'}) // <- replace it with yours
+  const client = new ApiAiClient({accessToken: '19f84cd37041402487c92dd234f9f544'}) // <- replace it with yours
     // Firebase Initialization
     // const db = firebase.initializeApp({
     //     databaseURL: 'https://vuefiredemo.firebaseio.com'
@@ -88,6 +96,9 @@ export default {
       return{
         answers: [],
         query: '',
+        components: {
+            VueMarkdown
+          }
         // speech: 'Go ahead, I am listening',
       }
     },
