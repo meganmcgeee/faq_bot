@@ -6,9 +6,7 @@
         <!-- User messages -->
           <tr>
             <td id="user-says" class="to message">
-              <vue-markdown>
-                {{a.result.resolvedQuery}}
-              </vue-markdown>  
+              {{a.result.resolvedQuery}}
             </td>
           </tr>
         <!-- Bot messages -->
@@ -16,11 +14,40 @@
             <td id="bot-says" class="to from">
         <!-- Bot message types / Speech -->
               <div v-if="a.result.fulfillment.speech">
-                <vue-markdown>
-                  {{a.result.fulfillment.speech}}
-                </vue-markdown>
-
+                {{a.result.fulfillment.speech}}
               </div>
+        <!-- Google Assistant Output Support for Rich UI Features-->
+          <!-- Card Messages -->
+              <div v-if="r.type == 'basic_card'">
+                <img :title="r.image.accessibilityText" :alt="image.accessibilityText" :src="r.image.url" v-if="r.image">
+                <section>
+                  <h1>{{r.title}}</h1>
+                  <br>
+                  <h2>{{r.subtitle}}</h2>
+                </section>
+                <section>
+                  {{r.formattedText}}
+                </section>
+                <section v-for="button in r.buttons">
+                  <a target="_blank" :href="button.openUrlAction.url">{{button.title}}<i class="material-icons openlink">
+                    open_in_new</i></a>
+                </section>
+              </div>
+          <!-- List Messages -->
+              <div v-if="r.type == 'list_card'">
+                <h3>{{r.title}}</h3>
+                  <ul v-for="item in r.items" @click="autosubmit(item.optionInfo.key)">
+                    <li class="mdc-list-item">
+                      <img :title="item.image.accessibilityText" :alt="item.image.accessibilityText" class="mdc-list-item__start-detail" width="56" height="56" :src="item.image.url" v-if="item.image"/>
+                      <span class="mdc-list-item__text">
+                          {{item.title}}
+                        <span>{{item.description}}</span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+          <!-- Link Chips -->
+          
             </td>
           </tr>
         </table>
@@ -35,7 +62,7 @@
           autofocus type="text"
           this.text = ""
           >
-        <button>Send</button>
+        <button id="send">Send</button>
       </div>
     </div>
   </section>
@@ -79,7 +106,6 @@
 <script>
 // DialogFlow Tokens
   import { ApiAiClient } from 'api-ai-javascript'
-  import VueMarkdown from 'vue-markdown'
 
   const client = new ApiAiClient({accessToken: '19f84cd37041402487c92dd234f9f544'}) // <- replace it with yours
     // Firebase Initialization
@@ -96,10 +122,10 @@ export default {
       return{
         answers: [],
         query: '',
-        components: {
-            VueMarkdown
-          }
-        // speech: 'Go ahead, I am listening',
+        // speech: 'Go ahead, im listening...',
+        // micro: false,
+        // muted: false,
+        online: navigator.onLine
       }
     },
     methods: {
@@ -111,8 +137,38 @@ export default {
           // this.speech = 'Go ahead, I am listening'
         })
       }
+      autosubmit(suggestion){
+        this.query = suggestion
+        this.submit()
+      },
+              mute(mode){
+            this.muted = mode
+        },
+        microphone(mode){
+            this.micro = mode
+            let self = this // <- correct scope
+
+            if(mode == true){
+                let recognition = new webkitSpeechRecognition() // <- chrome speech recognition
+
+                recognition.interimResults = true
+                recognition.lang = 'en-US'
+			    recognition.start()
+
+                recognition.onresult = function(event){
+			        for (var i = event.resultIndex; i < event.results.length; ++i){
+			    	    self.speech = event.results[i][0].transcript
+			        }
+			    }
+
+			    recognition.onend = function(){
+				    recognition.stop()
+                    self.micro = false
+                    self.autosubmit(self.speech)
+			    }
+
     }
-    // Firebase logic
+    }
   }
 </script>
 

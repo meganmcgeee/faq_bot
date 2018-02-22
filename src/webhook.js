@@ -52,6 +52,8 @@ const VOLUNTEER_INTENT = 'volunteer';
 
 // Dialogflow Context names
 
+// const ANSWER_CONTEXT = 'answer';
+
 // Dialogflow action names
 const WELCOME_ACTION = 'input.welcome';
 const ALERTS = 'input.alerts';
