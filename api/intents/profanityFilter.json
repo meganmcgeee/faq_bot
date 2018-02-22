@@ -1,0 +1,31 @@
+{
+  "id": "6e95531d-65e8-493d-8118-14e94abf557f",
+  "name": "profanityFilter",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": [
+            "That doesn\u0027t sound like a nice thing to say.",
+            "Please don\u0027t curse."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518316229,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,52 @@
+{
+  "id": "fd3d5c1a-b090-45a8-aa3f-a1190857bed3",
+  "name": "directions",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "directions",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "6ba60ba8-3c51-4b2f-b42a-05e4400bf793",
+          "required": true,
+          "dataType": "@Places",
+          "name": "Places",
+          "value": "$Places",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "I can help you with directions. For which place do you need directions? (Precinct, County Jail or Headquarters?)"
+            }
+          ],
+          "isList": false
+        },
+        {
+          "id": "38c5a010-c781-4518-a5b2-f15b85451e9d",
+          "required": false,
+          "dataType": "@sys.zip-code",
+          "name": "zip-code",
+          "value": "$zip-code",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I can\u0027t access this service at the moment. If you\u0027re not feeling safe please call 9-1-1."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "lastUpdate": 1518662448,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,44 @@
+{
+  "id": "76cf437e-c523-4331-ad27-1aefde5d24e6",
+  "name": "permit",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "permit",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "7a94ab64-f8b3-45a7-8ba1-89132ab96d86",
+          "required": true,
+          "dataType": "@Permits",
+          "name": "Permits",
+          "value": "$Permits",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "I can help you with permits. What type of permit do you need help with?"
+            }
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I can\u0027t access this service at the moment. If you\u0027re not feeling safe please call 9-1-1."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518662955,
+  "fallbackIntent": false,
+  "events": []
+}

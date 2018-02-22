@@ -1,0 +1,20 @@
+[
+  {
+    "value": "Email",
+    "synonyms": [
+      "Email",
+      "e-mail",
+      "email",
+      "email address",
+      "e-mail address"
+    ]
+  },
+  {
+    "value": "Phone",
+    "synonyms": [
+      "Phone",
+      "phone number",
+      "number"
+    ]
+  }
+]

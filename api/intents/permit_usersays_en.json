@@ -1,0 +1,166 @@
+[
+  {
+    "id": "a77f7df2-b5ae-48ed-9fe5-911724589fa4",
+    "data": [
+      {
+        "text": "registration",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "301b2f0b-d9ef-4b83-bae6-0f5260c4c49f",
+    "data": [
+      {
+        "text": "register my",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "3e9b3f00-029d-4776-a17c-09dc548befea",
+    "data": [
+      {
+        "text": "permit",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "cf4d77bd-387b-4b4c-a534-759a7084f203",
+    "data": [
+      {
+        "text": "register my ",
+        "userDefined": false
+      },
+      {
+        "text": "gun",
+        "alias": "Permits",
+        "meta": "@Permits",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "0b407c44-2db0-4f95-8e66-239c5c8c62cd",
+    "data": [
+      {
+        "text": "get a license for my ",
+        "userDefined": false
+      },
+      {
+        "text": "bike",
+        "alias": "Permits",
+        "meta": "@Permits",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "d0f95301-033a-4716-95f6-5ea7f8c69a5b",
+    "data": [
+      {
+        "text": "get a permit for my ",
+        "userDefined": false
+      },
+      {
+        "text": "bike",
+        "alias": "Permits",
+        "meta": "@Permits",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "dc89b6e1-4937-4986-b07c-7dec84cdfc4a",
+    "data": [
+      {
+        "text": "register my ",
+        "userDefined": false
+      },
+      {
+        "text": "bike",
+        "alias": "Permits",
+        "meta": "@Permits",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "61938c47-bc2a-49d1-a62b-fe6775960ec1",
+    "data": [
+      {
+        "text": "obtain a permit for ",
+        "userDefined": false
+      },
+      {
+        "text": "concealed carry",
+        "alias": "Permits",
+        "meta": "@Permits",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "332c681b-9fed-4c28-9bac-b695cbdf5289",
+    "data": [
+      {
+        "text": "gun permit",
+        "alias": "Permits",
+        "meta": "@Permits",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "d30cac1d-0bfc-4682-b05a-5d814dd95d0d",
+    "data": [
+      {
+        "text": "permit information",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  },
+  {
+    "id": "99fdf7fe-5fa0-430d-b4d2-ec5009f162f4",
+    "data": [
+      {
+        "text": "license",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662955
+  }
+]

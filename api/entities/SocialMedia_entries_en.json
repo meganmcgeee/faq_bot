@@ -1,0 +1,23 @@
+[
+  {
+    "value": "Twitter",
+    "synonyms": [
+      "Twitter"
+    ]
+  },
+  {
+    "value": "Instagram",
+    "synonyms": [
+      "IG",
+      "the gram",
+      "Insta"
+    ]
+  },
+  {
+    "value": "Facebook",
+    "synonyms": [
+      "Facebook",
+      "FB"
+    ]
+  }
+]

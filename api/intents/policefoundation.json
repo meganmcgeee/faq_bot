@@ -1,0 +1,29 @@
+{
+  "id": "c9477012-f3cf-4f5e-bf1e-a09b08fc120e",
+  "name": "policefoundation",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "policeFoundation",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I can\u0027t access this service at the moment. If you\u0027re not feeling safe please call 9-1-1."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518662990,
+  "fallbackIntent": false,
+  "events": []
+}

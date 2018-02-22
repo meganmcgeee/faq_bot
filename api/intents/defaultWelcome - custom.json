@@ -1,0 +1,33 @@
+{
+  "id": "6c3254a6-7e6b-47b3-b3f2-45adf08587ea",
+  "parentId": "01f8d469-0e90-4ab2-81ad-f85dfa3df327",
+  "rootParentId": "01f8d469-0e90-4ab2-81ad-f85dfa3df327",
+  "name": "defaultWelcome - custom",
+  "auto": true,
+  "contexts": [
+    "defaultWelcome-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "defaultWelcome.defaultWelcome-custom",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I can also help you find contact information, directions, file permits and much more!"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518653256,
+  "fallbackIntent": false,
+  "events": []
+}

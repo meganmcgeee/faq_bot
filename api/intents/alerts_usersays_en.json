@@ -1,0 +1,174 @@
+[
+  {
+    "id": "18c8184c-0685-43de-ae0c-8e5ef7fd7533",
+    "data": [
+      {
+        "text": "send me alerts",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "cd979548-60a9-4222-b406-4b40b47cf08b",
+    "data": [
+      {
+        "text": "can you send me ",
+        "userDefined": false
+      },
+      {
+        "text": "missing persons",
+        "alias": "Alerts",
+        "meta": "@Alerts",
+        "userDefined": true
+      },
+      {
+        "text": "  alerts?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "1227fc27-6088-42c3-9244-350b3642bf5f",
+    "data": [
+      {
+        "text": "emergency",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " management system",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "b3e73a38-3844-4114-aefa-771f334fbf82",
+    "data": [
+      {
+        "text": "alert me",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "885833a4-ac78-4955-abf8-9274a5f5b8e5",
+    "data": [
+      {
+        "text": "send me alerts to ",
+        "userDefined": false
+      },
+      {
+        "text": "347-622-2089",
+        "alias": "phone-number",
+        "meta": "@sys.phone-number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "a6c7e5f9-f808-4ceb-ba4c-9244e2ebb71a",
+    "data": [
+      {
+        "text": "send me texts",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "fd974a7b-9ea5-48c1-a748-d25be2eb32a9",
+    "data": [
+      {
+        "text": "how do i sign up for alerts?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "03a2d3f3-d1c2-4761-8a83-2add470366ee",
+    "data": [
+      {
+        "text": "@Alerts",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": true,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "5e4771f2-d9d0-4a56-a503-5e634bb5984e",
+    "data": [
+      {
+        "text": "text me",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "0b3cc68e-d39a-42a2-bba6-0aede7f5a943",
+    "data": [
+      {
+        "text": "emergency texts",
+        "alias": "Alerts",
+        "meta": "@Alerts",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "5b706043-cbc7-410d-97e5-402fa055e30b",
+    "data": [
+      {
+        "text": "emergency",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " sms",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  },
+  {
+    "id": "4b967f3c-110a-490e-a5f2-265441e4e2d7",
+    "data": [
+      {
+        "text": "send me alert texts",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518654375
+  }
+]

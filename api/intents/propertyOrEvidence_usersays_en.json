@@ -1,0 +1,74 @@
+[
+  {
+    "id": "8f6b13e3-0f5f-4029-b30f-f021943f640a",
+    "data": [
+      {
+        "text": "how do i reclaim my property?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662768
+  },
+  {
+    "id": "48ac0121-c6a9-4087-bed2-6ff84e407c7d",
+    "data": [
+      {
+        "text": "the police has my property",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662768
+  },
+  {
+    "id": "0caa08da-912e-4f4c-9565-98eb4b9b3258",
+    "data": [
+      {
+        "text": "how do get my property back?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662768
+  },
+  {
+    "id": "705f900f-21f3-4c4b-89bc-782dbf93360b",
+    "data": [
+      {
+        "text": "my property has been taken",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662768
+  },
+  {
+    "id": "2ad29aaf-4834-4a08-a361-85fae611f353",
+    "data": [
+      {
+        "text": "i\u0027d like my evidence returned",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662768
+  },
+  {
+    "id": "eb106a29-25ce-4341-9f15-2d48880e73e2",
+    "data": [
+      {
+        "text": "how do i get my evidence back?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518662768
+  }
+]

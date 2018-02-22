@@ -1,0 +1,108 @@
+[
+  {
+    "id": "31830794-477c-4a14-a1f8-7f79b9126898",
+    "data": [
+      {
+        "text": "my car is not where i parked it",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 1518663194
+  },
+  {
+    "id": "6d5e9023-2123-473a-9f47-f1809dce2d29",
+    "data": [
+      {
+        "text": "my car is missing",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518663194
+  },
+  {
+    "id": "3ab9f9d3-554f-471e-ba60-2e828f0fcd20",
+    "data": [
+      {
+        "text": "i left my car at ",
+        "userDefined": false
+      },
+      {
+        "text": "123 main st.",
+        "alias": "street-address",
+        "meta": "@sys.street-address",
+        "userDefined": true
+      },
+      {
+        "text": " and it is missing!",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518663194
+  },
+  {
+    "id": "c312182c-a33a-40b6-9f79-6adbc9db48e2",
+    "data": [
+      {
+        "text": "where is my car?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227616
+  },
+  {
+    "id": "b6404b75-8020-476c-a3df-aed02c089c5b",
+    "data": [
+      {
+        "text": "my car has been towed",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227616
+  },
+  {
+    "id": "50a3eec9-290a-4ebb-8604-40b6a233fc1b",
+    "data": [
+      {
+        "text": "tow",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227616
+  },
+  {
+    "id": "e522bc13-73d0-4983-92da-576be0af9176",
+    "data": [
+      {
+        "text": "towing",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227616
+  },
+  {
+    "id": "3b068131-5df7-46ee-a0c1-4005e5562b14",
+    "data": [
+      {
+        "text": "how do i locate my towed car?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 1518227616
+  }
+]

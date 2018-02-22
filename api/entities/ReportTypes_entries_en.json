@@ -1,0 +1,76 @@
+[
+  {
+    "value": "Neighborhood Nuisance Report",
+    "synonyms": [
+      "Neighborhood Nuisance",
+      "nuisance",
+      "loud noise",
+      "barking",
+      "party",
+      "loud",
+      "noise",
+      "speeding",
+      "yelling"
+    ]
+  },
+  {
+    "value": "Missing Person Report",
+    "synonyms": [
+      "Missing Person"
+    ]
+  },
+  {
+    "value": "Vehicle Accident Report",
+    "synonyms": [
+      "Vehicle Accident",
+      "car crash",
+      "car accident"
+    ]
+  },
+  {
+    "value": "Crime Report",
+    "synonyms": [
+      "Crime Report",
+      "theft",
+      "stole",
+      "stolen",
+      "steal",
+      "burglarized",
+      "burglary",
+      "broke in",
+      "break in",
+      "broke-in",
+      "break-in",
+      "got into my house",
+      "parked car hit",
+      "hit car",
+      "hit and run",
+      "stalking",
+      "harassment",
+      "harasment",
+      "blackmail",
+      "stalk",
+      "harass",
+      "vandalized",
+      "vandalism",
+      "broken car window",
+      "car theft",
+      "car stolen",
+      "truck stolen",
+      "home door broken",
+      "home window broken",
+      "car window broken",
+      "tv stolen",
+      "playstation gone",
+      "computer theft",
+      "selling drugs",
+      "drug sales"
+    ]
+  },
+  {
+    "value": "threatened",
+    "synonyms": [
+      "threatened"
+    ]
+  }
+]
