@@ -47,10 +47,14 @@
                   </ul>
                 </div>
           <!-- Link Chips -->
-          
-            </td>
-          </tr>
-        </table>
+                <div v-if="r.type == 'link_out_chip'" class="links">
+                  <a class="resource-link" :href="r.url" target="_blank">
+                    {{r.destinationName}} <i class="openLink">open_in_new</i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
       <!-- User Input Box and Send Button -->
       <div class="query" id="user-input">
         <input aria-label="Ask me something" 
@@ -103,73 +107,79 @@
   </style>
 
 // Bot Logic
-<script>
-// DialogFlow Tokens
-  import { ApiAiClient } from 'api-ai-javascript'
+  <script>
+  // DialogFlow Tokens
+    import { ApiAiClient } from 'api-ai-javascript'
 
-  const client = new ApiAiClient({accessToken: '19f84cd37041402487c92dd234f9f544'}) // <- replace it with yours
-    // Firebase Initialization
-    // const db = firebase.initializeApp({
-    //     databaseURL: 'https://vuefiredemo.firebaseio.com'
-    //   }).database()
-    // let users = db.ref('users')
+    const client = new ApiAiClient({accessToken: '19f84cd37041402487c92dd234f9f544'}) // <- replace it with yours
+      // Firebase Initialization
+      // const db = firebase.initializeApp({
+      //     databaseURL: 'https://vuefiredemo.firebaseio.com'
+      //   }).database()
+      // let users = db.ref('users')
 
 
-export default {
-  // Bot/ Dialogflow Logic
-    name: 'app',
-    data: function(){
-      return{
-        answers: [],
-        query: '',
-        // speech: 'Go ahead, im listening...',
-        // micro: false,
-        // muted: false,
-        online: navigator.onLine
-      }
-    },
-    methods: {
-      submit(){
-        client.textRequest(this.query).then((response) =>{
-          this.answers.push(response)
-          this.handle(response)
-          this.query = ''
-          // this.speech = 'Go ahead, I am listening'
-        })
-      }
-      autosubmit(suggestion){
-        this.query = suggestion
-        this.submit()
+  export default {
+    // Bot/ Dialogflow Logic
+      name: 'app',
+      data: function(){
+        return{
+          answers: [],
+          query: '',
+          // speech: 'Go ahead, im listening...',
+          // micro: false,
+          // muted: false,
+          online: navigator.onLine
+        }
       },
-              mute(mode){
-            this.muted = mode
+      watch: {
+        answers: function(val){
+            setTimeout(() => { 
+                document.querySelector('.query').scrollIntoView({ 
+                    behavior: 'smooth' 
+                })
+            }, 2) // if new answers arrive, wait for render and then smoothly scroll down to .copyright selector, used as anchor
+          }
         },
+      methods: {
+        submit(){
+          client.textRequest(this.query).then((response) =>{
+            this.answers.push(response)
+            this.handle(response)
+            this.query = ''
+            // this.speech = 'Go ahead, I am listening'
+          })
+        },
+        autosubmit(suggestion){
+          this.query = suggestion
+          this.submit()
+        },
+        mute(mode){
+          this.muted = mode
+          },
         microphone(mode){
-            this.micro = mode
-            let self = this // <- correct scope
+          this.micro = mode
+          let self = this // <- correct scope
 
-            if(mode == true){
-                let recognition = new webkitSpeechRecognition() // <- chrome speech recognition
-
-                recognition.interimResults = true
-                recognition.lang = 'en-US'
-			    recognition.start()
-
-                recognition.onresult = function(event){
-			        for (var i = event.resultIndex; i < event.results.length; ++i){
-			    	    self.speech = event.results[i][0].transcript
-			        }
-			    }
-
-			    recognition.onend = function(){
-				    recognition.stop()
-                    self.micro = false
-                    self.autosubmit(self.speech)
-			    }
-
+          if(mode == true){
+              let recognition = new webkitSpeechRecognition() // <- chrome speech recognition
+            recognition.interimResults = true
+            recognition.lang = 'en-US'
+            recognition.start()
+            recognition.onresult = function(event){
+              for (var i = event.resultIndex; i < event.results.length; ++i){
+                self.speech = event.results[i][0].transcript
+              }
+            }
+            recognition.onend = function(){
+              recognition.stop()
+                      self.micro = false
+                      self.autosubmit(self.speech)
+            }
+          }
+        }
+      }
     }
-    }
-  }
-</script>
+  </script>
 
 
