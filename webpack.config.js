@@ -39,9 +39,9 @@ module.exports = {
     }
   },
   devServer: {
-    historyApiFallback: true,
-    noInfo: true
-  },
+    host: 'localhost',
+    port: 3000
+  }, 
   performance: {
     hints: false
   },
