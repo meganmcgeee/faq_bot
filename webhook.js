@@ -8,7 +8,7 @@ const http = require('https');
 exports.appWebHook = (req, res) => {
   let content = req.body.result.parameters['content'];
 
-  getContent(content).then((output) => {
+  getInfo(content).then((output) => {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({ 'speech': output, 'displayText': output }));
   }).catch((error) => {
@@ -26,10 +26,11 @@ function getPrecinctInfo(content) {
   }
 }
 
-function getContent(content) {
+function getInfo(content) {
   let precinctInfo = getPrecinctInfo(content);
   return new Promise((resolve, reject) => {
-    console.log('API Request: to Reddit');
+    console.log('API Request: to Civitas AI API');
+    // http.get(`https://www.civitasai.com/precinctID/${precinctInfo["sub"]}.json`, (resp) => {
     http.get(`https://www.reddit.com/r/${precinctInfo["sub"]}/top.json?sort=top&t=day`, (resp) => {
       let data = '';
       resp.on('data', (chunk) => {
@@ -40,13 +41,13 @@ function getContent(content) {
         let response = JSON.parse(data);
         let thread = response["data"]["children"][(Math.floor((Math.random() * 24) + 1))]["data"];
 
-        let output = `Here's a ${precinctInfo["displayText"]}: ${thread["title"]}`;
+        let output = `If you are looking for help with ${precinctInfo["displayText"]}: ${thread["title"]}`;
 
-        if (precicntInfo['sub'] == "jokes") {
+        if (precintInfo['sub'] == "jokes") {
           output += " " + thread["selftext"];
         }
 
-        output += "\nWhat do you want to hear next, a joke or a fact?"
+        output += "\nCan I help you with anything else?"
         console.log(output);
         resolve(output);
       });
