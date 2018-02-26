@@ -1,13 +1,13 @@
-import Promise from 'bluebird';
-import mongoose from 'mongoose';
-import httpStatus from 'http-status';
 import APIError from '../helpers/APIError';
+import Promise from 'bluebird';
+import httpStatus from 'http-status';
+import mongoose from 'mongoose';
 
 /**
  * User Schema
  */
 const UserSchema = new mongoose.Schema({
-  username: {
+  email: {
     type: String,
     required: true
   },
@@ -15,6 +15,14 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
     match: [/^[1-9][0-9]{9}$/, 'The value of path {PATH} ({VALUE}) is not a valid mobile number.']
+  },
+  precinctName: {
+    type: String,
+    required: true
+  },
+  helpOptions: {
+    type: Array,
+    required: false
   },
   createdAt: {
     type: Date,

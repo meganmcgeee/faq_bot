@@ -23,62 +23,62 @@ function getPrecinctInfo(content) {
   switch (content) {
     // SMS Notifications/ phone alerts for precinct
     case 'alerts' || 'notifications' || 'text messages':
-      return { sub: "alerts", displayText: " crime alerts" };
+      return { subject: "alerts", displayText: " crime alerts" };
       break;
     // Police Precinct App information
     case 'app' || 'police app' || 'download app':
-      return { sub: "app", displayText: "the police smartphone app" };
+      return { subject: "app", displayText: "the police smartphone app" };
       break;
     //  Police Precinct General Contact information
     case 'contact' || 'call' || 'e-mail' || 'social media':
-      return { sub: "contact", displayText: "contacting the police" };
+      return { subject: "contact", displayText: "contacting the police" };
       break;
       // Fingerprinting information
     case 'fingerprint' || 'get fingerprinted' || 'finger print':
-      return { sub: "fingerprint", displayText: "fingerprinting" };
+      return { subject: "fingerprint", displayText: "fingerprinting" };
       break;
       // Hire
     case 'hire' || 'hire police' || 'need security for event':
-      return { sub: "hire", displayText: "hiring officers" };
+      return { subject: "hire", displayText: "hiring officers" };
       break;
       // Helicopter
     case 'helicopter' || 'helicopter overhead' || 'why is there a helicopter overhead':
-      return { sub: "helicopter", displayText: "helicopters overhead" };
+      return { subject: "helicopter", displayText: "helicopters overhead" };
       break;
       // Jobs
     case 'job' || 'apply for a job' || 'job openings':
-      return { sub: "job", displayText: "jobs with the force" };
+      return { subject: "job", displayText: "jobs with the force" };
       break;
       // Emergency
     case 'emergency' || 'danger' || '911':
-      return { sub: "emergency", displayText: "emergencies. Call 911 immediately" };
+      return { subject: "emergency", displayText: "emergencies. Call 911 immediately" };
       break;
       // Directions
     case 'directions' || 'how do I get to' || 'where is':
-      return { sub: "directions", displayText: "directions to headquarters" };
+      return { subject: "directions", displayText: "directions to headquarters" };
       break;
       // Parking ticket
     case 'parking ticket' || 'parking citation' || 'pay parking ticket' || 'pay ticket':
-      return { sub: "parkingCitation", displayText: "parking citation info." };
+      return { subject: "parkingCitation", displayText: "parking citation info." };
       break;
       // Foundation
     case 'foundation' || 'police foundation' || 'donating to or volunteering with the police foundation':
-      return { sub: "foundation", displayText: "fingerprinting" };
+      return { subject: "foundation", displayText: "fingerprinting" };
       break;
       // Permit
     case 'permit' || 'parking permit' || 'gun permit':
-      return { sub: "permit", displayText: "permits" };
+      return { subject: "permit", displayText: "permits" };
       break;
       // Report
     case 'report' || 'report a crime' || 'file police report':
-      return { sub: "report", displayText: "file a police report" };
+      return { subject: "report", displayText: "file a police report" };
       break;
       // Submit a tip
     case 'submitTip' || 'make annoymous tip' || 'submit a tip':
-      return { sub: "submitTip", displayText: "on how to submit anonymous tip" };
+      return { subject: "submitTip", displayText: "on how to submit anonymous tip" };
       break;
     default:
-      return { sub: "unknown", displayText: "something else" };
+      return { subject: "unknown", displayText: "something else" };
   }
 }
 
@@ -87,8 +87,7 @@ function getInfo(content) {
   let precinctInfo = getPrecinctInfo(content);
   return new Promise((resolve, reject) => {
     console.log('API Request: to Civitas AI API');
-    // http.get(`https://www.civitasai.com/api/precinctToken/${precinctInfo["sub"]}.json`, (resp) => {
-    http.get(`https://www.reddit.com/r/${precinctInfo["sub"]}/top.json?sort=top&t=day`, (resp) => {
+    http.get(`https://www.testurl.com/api/${precinctInfo["subject"]}.json`, (resp) => {
       let data = '';
       resp.on('data', (chunk) => {
         data += chunk;
@@ -96,12 +95,12 @@ function getInfo(content) {
 
       resp.on('end', () => {
         let response = JSON.parse(data);
-        let thread = response["data"]["children"][(Math.floor((Math.random() * 24) + 1))]["data"];
+        let thread = response["data"];
 
         let output = `If you are looking for help with ${content}, ${precinctInfo["displayText"]}: ${thread["title"]}`;
 
-        if (precintInfo['sub'] == "jokes") {
-          output += " " + thread["selftext"]; // selftext is the key of the property in the reddit example, see https://www.reddit.com/r/jokes/top.json?sort=top&t=day for JSON format that is processed in this expample
+        if (precintInfo['subject'] == "alerts") {
+          output += " " + thread["bot_output"];
         }
 
         output += "\nCan I help you with anything else?"
