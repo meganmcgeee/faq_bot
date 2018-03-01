@@ -3,7 +3,7 @@
 
 const http = require('https');
 
-exports.appWebHook = (req, res) => {
+exports.civitasAIWebhook = (req, res) => {
   let content = req.body.result.parameters['content'];
 // Reformats JSON data received from DialogFlow
   getInfo(content).then((output) => {
@@ -26,8 +26,8 @@ function getPrecinctInfo(content) {
       return { subject: "alerts", displayText: " crime alerts" };
       break;
     // Police Precinct App information
-    case 'app' || 'police app' || 'download app':
-      return { subject: "app", displayText: "the police smartphone app" };
+    case 'mobileApp' || 'police app' || 'download app':
+      return { subject: "mobileApp", displayText: "the police smartphone app" };
       break;
     //  Police Precinct General Contact information
     case 'contact' || 'call' || 'e-mail' || 'social media':
@@ -87,7 +87,8 @@ function getInfo(content) {
   let precinctInfo = getPrecinctInfo(content);
   return new Promise((resolve, reject) => {
     console.log('API Request: to Civitas AI API');
-    http.get(`https://www.testurl.com/api/${precinctInfo["subject"]}.json`, (resp) => {
+    http.get(`https://civitasai-api.herokuapp.com/jwtID/${precinctInfo["subject"]}`, (resp) => {
+      // https://api.airtable.com/v0/app7iJQOL0H0Jhnlp/${precinctInfo["subject"]}?api_key=keyc2OX8QggglF0bK
       let data = '';
       resp.on('data', (chunk) => {
         data += chunk;
@@ -95,12 +96,12 @@ function getInfo(content) {
 
       resp.on('end', () => {
         let response = JSON.parse(data);
-        let thread = response["data"];
+        let thread = response["selfText"];
 
-        let output = `If you are looking for help with ${content}, ${precinctInfo["displayText"]}: ${thread["title"]}`;
+        let output = `${precinctInfo["displayText"]}: ${thread["title"]}`;
 
         if (precintInfo['subject'] == "alerts") {
-          output += " " + thread["bot_output"];
+          output += " " + thread["selfText"];
         }
 
         output += "\nCan I help you with anything else?"

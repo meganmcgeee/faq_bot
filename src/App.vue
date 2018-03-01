@@ -326,23 +326,13 @@ td
         transform: scaleY(1)
 
 .copyright
-    font-weight: 600
-    color: rgba(0,0,0,0.8)
-
-.copyright a
-    text-decoration: none
-    color: rgba(0,0,0,0.8)
-    border-bottom: 2px solid transparent
-
-.copyright a:hover
-    color: $color
-    border-bottom: 2px solid $color
+   display: none
     
 </style>
 
 <script>
 import { ApiAiClient } from 'api-ai-javascript'
-const client = new ApiAiClient({accessToken: '41757bd076f642b98cc0132c1d79289b'}) // <- replace it with yours
+const client = new ApiAiClient({accessToken: 'c5c5a8a9367e4d429c7056a1f3abc033'}) // <- replace it with yours
 
 export default {
     name: 'app',

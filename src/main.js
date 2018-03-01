@@ -8,7 +8,7 @@ import Vue from 'vue'
 // const db = firebaseApp.database()
 // explicit installation required in module environments
 
-Vue.use(VueFire)
+
 // Dialogflow API and front end
 new Vue({
   el: '#app',
